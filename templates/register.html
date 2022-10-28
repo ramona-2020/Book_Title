@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+   <section class="register-form-container">
+
+        <form action="{% url 'register' %}" method="post">
+            <h3>Register</h3>
+            {% csrf_token %}
+            {{ form }}
+
+            <input type="submit" value="Register" class="btn">
+            <p>Have an account ? <a href="#">Click here</a></p>
+        </form>
+    </section>
+
+{% endblock %}

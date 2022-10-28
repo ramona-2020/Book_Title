@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block page_content %}
+   <section class="edit-form-container">
+
+        <form action="{% url 'book edit' book.pk %}" method="post">
+            <h3>Edit Book Review</h3>
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Edit" class="btn">
+        </form>
+    </section>
+{% endblock %}

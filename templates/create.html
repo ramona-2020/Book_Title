@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block page_content %}
+        <section class="create-form-container">
+
+        <form action="{% url 'create book review' %}" method="post" enctype="multipart/form-data">
+            <h3>Create Book Review</h3>
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Create" class="btn">
+        </form>
+    </section>
+{% endblock %}
